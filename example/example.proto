@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "grpc-go-test/example";
+
+message StringMessage {
+  string value = 1;
+}
+
+service YourService {
+  rpc Echo(StringMessage) returns (StringMessage) {}
+}
