@@ -2,6 +2,10 @@ syntax = "proto3";
 
 package services;
 
+option go_package = "grpc-go-test/prod";
+
+import "grpc-go-test/status/status.proto";
+
 message ProdRequest {
   // 商品ID
   int32 prod_id = 1;
@@ -10,6 +14,7 @@ message ProdRequest {
 message ProdResponse {
   // 商品库存
   int32 prod_stock = 1;
+  status.Status status = 2;
 }
 
 service ProductService {
