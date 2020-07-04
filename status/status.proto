@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package status;
 
-option go_package = "grpc-go-test/status";
+option go_package = "grpc-test-demo/src/status";
 
 message Status{
 
